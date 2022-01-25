@@ -15,37 +15,16 @@ public class Main {
             d) dane powinny być estetycznie przedstawione
          */
 
-        /* Nie zrobiłem tego ćwiczenia za pomocą tablic, bo nie rozumiałem za bardzo polecenia
-        Tablice z tego co wiem mogą przechowywać tylko jeden typ zmiennej. A tworzenie trzech oddzielnych mija się troche z celem.
-        Dlatego wykorzystałem listę tak jak to jest w przykładzie
-         */
-        List<Student> listastudentow = new ArrayList<>();
+        Student[] obj = new Student[4];
+        obj[1] = new Student( "Damian" , "Nizinski" , 12345 , true );
+        obj[2] = new Student( "Arnold" , "Maczka" , 542878 , false );
+        obj[3] = new Student( "Maciek" , "Lipka" , 77785 , true );
 
-        Student student = new Student();
-        student.Imie = "Damian";
-        student.Nazwisko = "Nizinski";
-        student.NrAlbumu = 12345;
-        student.zdal = true;
-        listastudentow.add(student);
-
-        student = new Student();
-        student.Imie = "Andrzej";
-        student.Nazwisko = "Lipski";
-        student.NrAlbumu = 56423;
-        student.zdal = false;
-        listastudentow.add(student);
-
-        student = new Student();
-        student.Imie = "Michal";
-        student.Nazwisko = "Miska";
-        student.NrAlbumu = 56431;
-        student.zdal = true;
-        listastudentow.add(student);
-
-        System.out.println("Imie | " +  "Nazwisko | " +  "Album | Status");
-        for (Student p : listastudentow) {
-            System.out.println(p.Imie+ " | " + p.Nazwisko + " | " + p.NrAlbumu + " | " + p.zdal);
+        for(int i = 1; i <= 3; i++)
+        {
+            System.out.println(obj[i].Imie+ " | " + obj[i].Nazwisko + " | " + obj[i].NrAlbumu + " | " + obj[i].zdal);
         }
+
 
     }
 }
