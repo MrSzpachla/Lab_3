@@ -20,5 +20,51 @@ public class Main {
         /* statusy i wybór ze switch case to najczęstsze użycia enumów, enumy są często używane
         * w różnego rodzaju listach, selectach jako krótkie opcje wyboru np. jako status A, X (Aktualny, Usunięty) */
 
+        enum LiczbyEnum {
+            Jeden, Dwa, Trzy, Cztery, Piec, Szesc
+        }
+        enum StatusEnum {
+            KONTYNUUJEMY, KONIEC
+        }
+
+        int[] przy = {1, 2, 3, 4, 5, 6, 0};
+        int a = 0;
+        Scanner scan = new Scanner(System.in);
+        while(true)
+        {
+            a = scan.nextInt();
+            switch (a) {
+                case 1:
+                    System.out.println("Liczba: " + LiczbyEnum.Jeden);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 2:
+                    System.out.println("Liczba: " + LiczbyEnum.Dwa);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 3:
+                    System.out.println("Liczba: " + LiczbyEnum.Trzy);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 4:
+                    System.out.println("Liczba: " + LiczbyEnum.Cztery);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 5:
+                    System.out.println("Liczba: " + LiczbyEnum.Piec);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 6:
+                    System.out.println("Liczba: " + LiczbyEnum.Szesc);
+                    System.out.println("Status: " + StatusEnum.KONTYNUUJEMY);
+                    break;
+                case 0:
+                    System.out.println("Status: " + StatusEnum.KONIEC);
+                    return;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + a);
+            }
+        }
+
     }
 }
