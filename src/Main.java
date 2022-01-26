@@ -14,5 +14,7 @@ public class Main {
             oraz stworzyć listę typu najbardziej generycznego np. List<Budynek>
          */
 
+    Parametry p1 = new Parametry("GDA14245","MAN","Czerwony",23450,18000,"Ryby",16000,90,95,40);
+    System.out.println(p1.toString());
     }
 }
