@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
+
+
     public static void main(String[] args) {
 
         /* ćw 3 klasy */
@@ -19,5 +21,17 @@ public class Main {
             e) wywołać metody suma i róznica (obie wersje) z klasy punkt
         */
 
+        Punkt punktA = new Punkt(7);
+        System.out.println(punktA.toString());
+        punktA = new Punkt(1, 2, 3);
+        System.out.println(punktA.toString());
+        punktA.setpX(4);
+        punktA.setpY(5);
+        punktA.setpZ(6);
+        System.out.println(punktA.toString());
+        System.out.printf("x = %d, y = %d, z = %d \n", punktA.getpX(), punktA.getpY(), punktA.getpZ());
+        System.out.println("Suma = "+punktA.suma(punktA.getpX(), punktA.getpY(), punktA.getpZ()));
+        System.out.println("Rozncia = "+punktA.roznica());
+        System.out.println("Rozncia = "+punktA.roznica(punktA.getpX(), punktA.getpY(), punktA.getpZ()));
     }
 }
